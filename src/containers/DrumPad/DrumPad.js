@@ -10,7 +10,7 @@ export default class DrumPad extends React.Component{
         window.focus();
     }
     componentWillUnmount() {
-        console.log('componentWillUnmount!!!');
+        console.log('componentWillUnmount!');
         document.removeEventListener('keydown', this.handleKeyDown);
     }
 
@@ -22,12 +22,19 @@ export default class DrumPad extends React.Component{
         }
     };
 
+    handleClick = (e)=>{
+        console.log(`click ${e.keycode}`);
+            this.audio.play()
+            this.audio.currentTime = 0
+            this.props.handleDisplay(this.props.id)
+    };
+
 
     render() {
         return(
             <div className='boxes'>
 
-                <div className='box-class'>
+                <div className='box-class' onClick={this.handleClick}>
                     <p className='letter'>{this.props.letter}</p>
                     <p className='explanation'>{this.props.id}</p>
                 </div>
