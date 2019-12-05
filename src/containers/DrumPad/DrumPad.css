@@ -1,0 +1,36 @@
+
+.boxes {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.box-class{
+    flex: 1;
+    background-color: rgba(255,215,0,0.8);
+    border-radius: 0.5rem;
+    border: 4px black solid;
+    font-family: sans-serif;
+    width: 100px;
+}
+
+.box-class p {
+    margin: 5px 5px;
+
+}
+
+.letter{
+    text-align: center;
+    font-size: 45px;
+    color: #ffffff;
+    padding-bottom: 5px;
+    text-shadow: 0 0 .5rem black;
+}
+
+.explanation{
+    text-align: center;
+    color: #51eee0;
+    text-shadow: 0 0 .5rem black;
+
+}
